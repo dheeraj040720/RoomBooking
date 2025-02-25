@@ -9,11 +9,49 @@ import java.util.Scanner;
 
 public class Operations {
 
-    private List<Room>room = new ArrayList<>();
+    private static List<Room>room = new ArrayList<>();
+    private static List<String>customerList=new ArrayList<>();
 
 
 
-public List<String> customerDetails()
+
+
+    public List<Room> CustomerDetails()
+    {
+
+        CustomerDetails customer = new CustomerDetails();
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter you name");
+        String name=scan.next();
+
+        System.out.println("enter you phonenumber");
+        String phoneNumber=scan.next();
+
+       // customerList.add(CustomerDetails);
+        customerList.add(customer.setGuestName(name));
+        customerList.add(customer.setGuestPhoneno(phoneNumber));
+
+
+
+
+        return null;
+    }
+
+    public void displayCustomerDetails()
+    {
+
+        for(String s:customerList)
+        {
+
+            System.out.println(s);
+        }
+
+
+
+    }
+
+/*public List<String> customerDetails()
 
 {
 
@@ -34,14 +72,14 @@ public List<String> customerDetails()
 
     for(String a:customerDetails)
     {
-        System.out.println(a);
+
     }
 
 
 
 
     return customerDetails;
-}
+}*/
 
 
 
