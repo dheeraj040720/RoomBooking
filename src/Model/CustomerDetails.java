@@ -1,5 +1,6 @@
 package Model;
 
+
 public class CustomerDetails {
 
 
@@ -9,8 +10,12 @@ public class CustomerDetails {
     private String phoneNumber;
 
 
-    CustomerDetails()
-    {}
+
+
+   public  CustomerDetails()
+    {
+
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -47,4 +52,9 @@ public class CustomerDetails {
         this.phoneNumber = phoneNumber;
         return phoneNumber;
     }
+
+
+
+
+
 }

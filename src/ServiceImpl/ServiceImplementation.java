@@ -9,17 +9,31 @@ import java.util.Scanner;
 public class ServiceImplementation  implements Service {
 
     static LinkedList<CustomerDetails>customerList=new LinkedList<>();
-    @Override
-    public void addCustomerDetails(CustomerDetails customer) {
+    static int count=0;
 
+    static int price=60;
+    @Override
+    public void addCustomerDetails() {
+
+        CustomerDetails customer = new CustomerDetails();
         Scanner scan = new Scanner(System.in);
 
+
        System.out.println("enter your name");
+
 
        String s=customer.setCustomerName(scan.next());
         System.out.println("enter your phone number");
         String p=customer.setPhoneNumber(scan.next());
    customerList.add(customer);
+   while(customerList!=null)
+   {
+       count++;
+       customer.setCustomerId(count);
+       break;
+   }
+
+
 
 
     }
@@ -31,6 +45,11 @@ public class ServiceImplementation  implements Service {
 
     @Override
     public void displayAllCustomerDetails() {
+        for(  CustomerDetails s :customerList )
+        {
+
+            System.out.println(s);
+        }
 
     }
 
@@ -38,4 +57,13 @@ public class ServiceImplementation  implements Service {
     public void displayCustomerDetailsById(int cid) {
 
     }
+
+    @Override
+    public void RoomCalculation() {
+
+
+
+    }
+
+
 }

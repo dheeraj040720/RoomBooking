@@ -4,10 +4,11 @@ import Model.CustomerDetails;
 
 public interface Service {
 
-    void addCustomerDetails(CustomerDetails customer);
+    void addCustomerDetails();
     void deleteCustomerDetailsById(CustomerDetails customer);
 
     void displayAllCustomerDetails();
     void displayCustomerDetailsById(int cid);
+    void RoomCalculation();
 
 }
