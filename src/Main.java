@@ -34,6 +34,18 @@ public class Main {
                case 2:
                    serviceImp.displayAllCustomerDetails();
                    break;
+
+
+               case 3:
+                   System.out.println("enter the id to be deleted");
+                   int cid= scan.nextInt();
+                   serviceImp.displayCustomerDetailsById(cid);
+
+               case 4:
+                   System.out.println("enter name");
+                   String id= scan.next();
+
+                   serviceImp.RoomCalculation(id);
            }
 
            System.out.println("do u wan to continue  y or n ");
